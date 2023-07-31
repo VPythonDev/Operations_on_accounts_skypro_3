@@ -1,4 +1,4 @@
-from src.change_data_format import change_date, hide_sender_number
+from src.change_data_format import change_date, hide_sender_number, hide_recipient_number
 from datetime import datetime
 import pytest
 
@@ -18,3 +18,11 @@ def test_change_date(test_date_list, expected):
 ])
 def test_hide_sender_number(test_sender_nums, expected):
     assert hide_sender_number(test_sender_nums) == expected
+
+
+@pytest.mark.parametrize('test_recipient_nums, expected', [
+    ({'to': 'Счет 90424923579946435907'}, '**5907'),
+    ({'to': '14211924144426031657'}, '**1657')
+])
+def test_hide_recipient_number(test_recipient_nums, expected):
+    assert hide_recipient_number(test_recipient_nums) == expected
