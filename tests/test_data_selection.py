@@ -1,4 +1,4 @@
-from src.data_selection import data_filtering
+from src.utils.data_selection import data_filtering
 
 
 def test_data_filtering():

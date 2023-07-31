@@ -1,6 +1,6 @@
 import pytest
 from datetime import datetime
-from src.display_transactions import show_transactions
+from src.utils.display_transactions import show_transactions
 
 
 @pytest.mark.parametrize('test_transaction, expected', [
