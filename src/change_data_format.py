@@ -14,3 +14,12 @@ def hide_sender_number(operation_data):
         hidden_sender_number = hidden_sender_number[:i] + ' ' + hidden_sender_number[i:]
 
     return hidden_sender_number
+
+
+def hide_recipient_number(operation_data):
+    """Скрывает номер карты получателя"""
+    recipient_number = operation_data['to'].split()[-1]
+
+    # В последних 6 цифрах первые 2 меняем на **
+    hidden_recipient_number = recipient_number[-6:].replace(recipient_number[-6:-4], '*' * len(recipient_number[-6:-4]))
+    return hidden_recipient_number
