@@ -1,4 +1,4 @@
-from src.sorting import data_sorting
+from src.utils.sorting import data_sorting
 from datetime import datetime
 
 

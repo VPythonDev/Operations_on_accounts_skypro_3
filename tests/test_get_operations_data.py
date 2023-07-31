@@ -1,4 +1,4 @@
-from src.get_operations_data import get_operations_data
+from src.utils.get_operations_data import get_operations_data
 import json
 
 
